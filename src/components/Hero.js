@@ -91,10 +91,10 @@ const Hero = () => {
               </svg>
             </button>
           </div>
-          <div className={styles.cartInbox}>
+          <button className={styles.cartInbox}>
             <PiShoppingCart className={styles.cartIcon} />
             <p>Add to cart</p>
-          </div>
+          </button>
         </div>
       </div>
     </div>

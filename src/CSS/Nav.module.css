@@ -25,6 +25,7 @@
   border: none;
   background: transparent;
   cursor: pointer;
+  margin-top: 0.7rem;
 }
 
 .navList {
@@ -55,6 +56,8 @@
 .navBar {
   display: flex;
   height: 2rem;
+  margin-top: 1rem;
+  padding: 2rem 1.5rem;
 }
 
 .logoMenu,

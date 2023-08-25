@@ -5,10 +5,22 @@
 
 .shoeContainer {
   width: 100%;
+  position: relative;
 }
 
 .shoeImg {
   width: 100%;
+  object-fit: cover;
+}
+
+.slideIn {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideOut {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
 }
 
 .btnNext,
@@ -19,17 +31,15 @@
   padding: 1.1rem;
   border-radius: 50%;
   cursor: pointer;
+  position: absolute;
+  top: 25rem;
 }
 
 .btnNext {
-  position: absolute;
-  top: 50%;
   right: 20px;
 }
 
 .btnPrev {
-  position: absolute;
-  top: 50%;
   left: 20px;
 }
 

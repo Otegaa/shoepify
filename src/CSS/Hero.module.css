@@ -1,6 +1,5 @@
 .sliderContainer {
   margin-top: 2rem;
-  height: 60rem;
 }
 
 .shoeContainer {
@@ -138,6 +137,11 @@
   padding: 2rem 0;
   gap: 1.5rem;
   margin-top: 1.5rem;
+  transition: all 0.3s;
+}
+
+.cartInbox:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 
 .cartIcon {

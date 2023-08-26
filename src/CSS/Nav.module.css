@@ -77,6 +77,29 @@
   margin-right: auto;
 }
 
+.cartContainer {
+  position: relative;
+}
+
+.amountContainer {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.6rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #ff7d1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.amtTotal {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
 .avatar {
   height: 2.5rem;
   width: 2.5rem;

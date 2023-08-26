@@ -3,9 +3,13 @@ import { increaseItem, decreaseItem } from '../Redux/cart/cartSlice';
 import styles from '../CSS/Hero.module.css';
 import { PiShoppingCart } from 'react-icons/pi';
 
-const HeroDetails = () => {
+const HeroDetails = ({ setTotalInCart }) => {
   const dispatch = useDispatch();
   const { amount } = useSelector((store) => store.cart);
+
+  const handleAddToCart = () => {
+    setTotalInCart((prev) => prev + amount);
+  };
 
   return (
     <div className={styles.heroDetails}>
@@ -58,7 +62,7 @@ const HeroDetails = () => {
             </svg>
           </button>
         </div>
-        <button className={styles.cartInbox}>
+        <button className={styles.cartInbox} onClick={handleAddToCart}>
           <PiShoppingCart className={styles.cartIcon} />
           <p>Add to cart</p>
         </button>

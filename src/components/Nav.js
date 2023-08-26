@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import avatar from '../assets/images/image-avatar.png';
 import styles from '../CSS/Nav.module.css';
 
-const Nav = () => {
+const Nav = ({ totalInCart }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { amount } = useSelector((store) => store.cart);
 
   const handleOpenHamburger = () => {
     setIsOpen(true);
@@ -83,7 +81,7 @@ const Nav = () => {
               />
             </svg>
             <div className={styles.amountContainer}>
-              <p className={styles.amtTotal}>{amount}</p>
+              <p className={styles.amtTotal}>{totalInCart}</p>
             </div>
           </div>
           <img src={avatar} alt="user-avatar" className={styles.avatar} />

@@ -1,11 +1,13 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import styles from '../CSS/Cart.module.css';
 import cartImg from '../assets/images/image-product-1-thumbnail.jpg';
-import { clearCart } from '../Redux/cart/cartSlice';
 
-const CartInfo = () => {
-  const dispatch = useDispatch();
-  const { amount, total, price } = useSelector((store) => store.cart);
+const CartInfo = ({ totalInCart, setTotalInCart }) => {
+  const { total, price } = useSelector((store) => store.cart);
+
+  const handleClearCart = () => {
+    setTotalInCart(0);
+  };
 
   return (
     <div className={styles.cartBox}>
@@ -13,7 +15,7 @@ const CartInfo = () => {
         <h3>Cart</h3>
       </div>
       <div className={styles.cartInfo}>
-        {amount < 1 ? (
+        {totalInCart < 1 ? (
           <p className={styles.emptyCart}>Your cart is empty.</p>
         ) : (
           <div className={styles.fullCart}>
@@ -22,12 +24,12 @@ const CartInfo = () => {
               <div className={styles.fullCartInfoText}>
                 <p>Fall Limited Edition Sneakers</p>
                 <p>
-                  ${price.toFixed(2)} x {amount}{' '}
+                  ${price.toFixed(2)} x {totalInCart}{' '}
                   <span>${total.toFixed(2)}</span>
                 </p>
               </div>
               <div className={styles.fullCartInfoBin}>
-                <button onClick={() => dispatch(clearCart())}>
+                <button onClick={handleClearCart}>
                   <svg
                     width="14"
                     height="16"

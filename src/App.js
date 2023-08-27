@@ -1,7 +1,7 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import HeroDetails from './components/HeroDetails';
-import styles from './CSS/Nav.module.css';
+import styles from './CSS/All.module.css';
 import { useState } from 'react';
 
 function App() {

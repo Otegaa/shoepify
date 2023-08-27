@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from '../CSS/Nav.module.css';
+import styles from '../CSS/All.module.css';
 import { data } from '../data';
 
 const Hero = () => {

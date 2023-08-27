@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import avatar from '../assets/images/image-avatar.png';
-import styles from '../CSS/Nav.module.css';
+import styles from '../CSS/All.module.css';
 import CartInfo from './CartInfo';
 
 const Nav = ({ totalInCart, setTotalInCart }) => {

@@ -1,6 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { increaseItem, decreaseItem } from '../Redux/cart/cartSlice';
-import styles from '../CSS/Hero.module.css';
+import {
+  increaseItem,
+  decreaseItem,
+  setAmountToZero,
+} from '../Redux/cart/cartSlice';
+import styles from '../CSS/Nav.module.css';
 import { PiShoppingCart } from 'react-icons/pi';
 
 const HeroDetails = ({ setTotalInCart }) => {
@@ -9,6 +13,7 @@ const HeroDetails = ({ setTotalInCart }) => {
 
   const handleAddToCart = () => {
     setTotalInCart((prev) => prev + amount);
+    dispatch(setAmountToZero());
   };
 
   return (

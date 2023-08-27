@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from '../CSS/Hero.module.css';
+import styles from '../CSS/Nav.module.css';
 import { data } from '../data';
 
 const Hero = () => {
@@ -33,6 +33,7 @@ const Hero = () => {
       clearInterval(handleInterval);
     };
   }, [index]);
+
   return (
     <div className={styles.heroShoe}>
       <div

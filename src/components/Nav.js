@@ -5,7 +5,7 @@ import CartInfo from './CartInfo';
 
 const Nav = ({ totalInCart, setTotalInCart }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isCartClicked, setIsCartClicked] = useState(false);
 
   const handleOpenHamburger = () => {
     setIsOpen(true);
@@ -16,7 +16,7 @@ const Nav = ({ totalInCart, setTotalInCart }) => {
   };
 
   const handleToggleHoverCart = () => {
-    setIsHovered((prevState) => !prevState);
+    setIsCartClicked((prevState) => !prevState);
   };
 
   return (
@@ -77,6 +77,37 @@ const Nav = ({ totalInCart, setTotalInCart }) => {
           <h1 className={styles.title}>shoepify</h1>
         </div>
 
+        <div className={styles.logoMenuDesktop}>
+          <ul className={styles.navListDesktop}>
+            <li>
+              <a href="#" className={styles.navLinkDesktop}>
+                Collections
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.navLinkDesktop}>
+                Men
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.navLinkDesktop}>
+                Women
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.navLinkDesktop}>
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" className={styles.navLinkDesktop}>
+                Contact
+              </a>
+            </li>
+          </ul>
+          <h1 className={styles.title}>shoepify</h1>
+        </div>
+
         <div className={styles.user}>
           <div className={styles.cartContainer} onClick={handleToggleHoverCart}>
             <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +124,7 @@ const Nav = ({ totalInCart, setTotalInCart }) => {
           <img src={avatar} alt="user-avatar" className={styles.avatar} />
         </div>
       </div>
-      {isHovered && (
+      {isCartClicked && (
         <CartInfo totalInCart={totalInCart} setTotalInCart={setTotalInCart} />
       )}
     </>

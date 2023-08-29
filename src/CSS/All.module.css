@@ -194,7 +194,6 @@
 
 .price {
   display: flex;
-  align-items: center;
   margin-top: 1.5rem;
 }
 
@@ -237,7 +236,7 @@
   justify-content: space-between;
   background-color: #f7f8fd;
   padding: 1rem 2rem;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 
 .detailsBg button {
@@ -368,7 +367,7 @@
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 
-/* Big screens */
+/* Big screens from 1000px */
 
 @media (min-width: 1000px) {
   .overlay,
@@ -432,7 +431,22 @@
 
   .sliderContainer {
     display: grid;
+    gap: 5rem;
     grid-template-columns: 1fr 1fr;
+    padding: 5rem 3rem;
+  }
+
+  .heroShoe {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .shoeImg {
+    border-radius: 10px;
+  }
+
+  .heroDetails {
+    align-self: center;
   }
 
   .btnNext,
@@ -444,5 +458,38 @@
   .slideOut {
     transition: none;
     transform: translateX(0);
+  }
+
+  .price {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .actualPrice {
+    align-items: flex-start;
+  }
+
+  .cartDetails {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .detailsBg {
+    flex: 0 0 40%;
+  }
+
+  .cartInbox {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sliderContainer {
+    gap: 2rem;
+  }
+
+  .heroShoe {
+    width: 50rem;
+    height: 50rem;
   }
 }

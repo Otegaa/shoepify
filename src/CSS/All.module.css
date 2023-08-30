@@ -131,6 +131,10 @@
   object-fit: cover;
 }
 
+.smallShoesContainer {
+  display: none;
+}
+
 .slideIn {
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
@@ -445,6 +449,24 @@
     border-radius: 10px;
   }
 
+  .allShoeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .smallShoesContainer {
+    width: 40rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .smallShoeImg {
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 10px;
+  }
+
   .heroDetails {
     align-self: center;
   }
@@ -486,10 +508,5 @@
 @media (min-width: 1280px) {
   .sliderContainer {
     gap: 2rem;
-  }
-
-  .heroShoe {
-    width: 50rem;
-    height: 50rem;
   }
 }

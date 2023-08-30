@@ -36,12 +36,28 @@ const Hero = () => {
 
   return (
     <div className={styles.heroShoe}>
-      <div
-        className={`${styles.shoeContainer} ${
-          slideDirection === 'in' ? styles.slideIn : styles.slideOut
-        }`}
-      >
-        <img src={imgBig} alt={name} className={styles.shoeImg} />
+      <div className={styles.allShoeContainer}>
+        <div
+          className={`${styles.shoeContainer} ${
+            slideDirection === 'in' ? styles.slideIn : styles.slideOut
+          }`}
+        >
+          <img src={imgBig} alt={name} className={styles.shoeImg} />
+        </div>
+        <div className={styles.smallShoesContainer}>
+          {data.map((shoe) => {
+            const { id, imgSmall } = shoe;
+            return (
+              <div className={styles.smallShoeImg} key={id}>
+                <img
+                  src={imgSmall}
+                  alt={`shoe${id}`}
+                  className={styles.smallShoeImg}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div className={styles.btnContainer}>
         <button onClick={handlePrevPerson} className={styles.btnPrev}>

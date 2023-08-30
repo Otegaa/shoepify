@@ -470,30 +470,22 @@
     position: relative;
   }
 
-  /* White overlay effect */
-  .smallShoeImg::before {
+  .smallShoeImg::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0); /* Initially transparent */
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
-    transition: background-color 0.2s ease-in-out; /* Transition for hover effect */
+    transition: all 0.2s;
+    opacity: 0;
   }
 
-  /* Hover effect: Change the background color to white on hover */
-  .smallShoeImg:hover::before {
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.7
-    ); /* White with some transparency */
-  }
-
-  .smallShoeImg:hover {
+  .smallShoeImg:hover::after {
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
     border: 1px solid #ff7d1a;
   }
 

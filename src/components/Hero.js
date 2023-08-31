@@ -8,7 +8,7 @@ const Hero = () => {
 
   const { imgBig, name } = data[index];
 
-  const handleNextPerson = () => {
+  const handleNextShoe = () => {
     setSlideDirection('out');
     setTimeout(() => {
       setIndex((prevIndex) => (prevIndex + 1) % data.length);
@@ -16,7 +16,7 @@ const Hero = () => {
     }, 500);
   };
 
-  const handlePrevPerson = () => {
+  const handlePrevShoe = () => {
     setSlideDirection('out');
     setTimeout(() => {
       setIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
@@ -29,7 +29,7 @@ const Hero = () => {
 
     if (screenWidth < 1000) {
       const handleInterval = setInterval(() => {
-        handleNextPerson();
+        handleNextShoe();
       }, 3000);
 
       return () => {
@@ -64,7 +64,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={styles.btnContainer}>
-        <button onClick={handlePrevPerson} className={styles.btnPrev}>
+        <button onClick={handlePrevShoe} className={styles.btnPrev}>
           <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M11 1 3 9l8 8"
@@ -75,7 +75,7 @@ const Hero = () => {
             />
           </svg>
         </button>
-        <button onClick={handleNextPerson} className={styles.btnNext}>
+        <button onClick={handleNextShoe} className={styles.btnNext}>
           <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m2 1 8 8-8 8"

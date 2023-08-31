@@ -294,6 +294,7 @@
   height: 30rem;
   border: 1px solid #fff;
   border-radius: 5px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 
 .cartTitle {
@@ -525,6 +526,18 @@
   .cartInbox {
     margin-top: 0;
   }
+
+  /* CartInfo */
+  .cartItemsContainer {
+    right: 1rem;
+    width: 40%;
+  }
+
+  .cartBox {
+    margin-top: -4rem;
+  }
+
+  /* Shoe overview */
 }
 
 @media (min-width: 1280px) {

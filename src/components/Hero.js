@@ -25,13 +25,17 @@ const Hero = () => {
   };
 
   useEffect(() => {
-    const handleInterval = setInterval(() => {
-      handleNextPerson();
-    }, 3000);
+    const screenWidth = window.innerWidth;
 
-    return () => {
-      clearInterval(handleInterval);
-    };
+    if (screenWidth < 1000) {
+      const handleInterval = setInterval(() => {
+        handleNextPerson();
+      }, 3000);
+
+      return () => {
+        clearInterval(handleInterval);
+      };
+    }
   }, [index]);
 
   return (

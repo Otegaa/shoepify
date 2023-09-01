@@ -473,6 +473,7 @@
     border-radius: 10px;
     transition: all 0.2s;
     position: relative;
+    cursor: pointer;
   }
 
   .smallShoeImg::after {
@@ -556,14 +557,14 @@
   }
 
   .shoeOverviewContainer {
+    margin: 10rem 5rem 0;
     display: block;
-    margin: 5rem;
     position: relative;
   }
 
   .btnClose {
-    position: fixed;
-    top: 2rem;
+    position: absolute;
+    top: 0;
     left: 64vw;
     z-index: 10;
     border: none;
@@ -614,6 +615,13 @@
     height: 7rem;
     margin-top: 2rem;
     border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .selectedSmallImage img {
+    border: 2px solid #ff7d1a;
+    z-index: 2;
   }
 }
 

@@ -1,23 +1,18 @@
-import { useState } from 'react';
 import styles from '../CSS/All.module.css';
 import { data } from '../data';
 
-const ShoeOverview = () => {
-  const [index, setIndex] = useState(0);
-  const { imgBig, name } = data[index];
-
-  const handleNextShoe = () => {
-    setIndex((prevIndex) => (prevIndex + 1) % data.length);
-  };
-
-  const handlePrevShoe = () => {
-    setIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
-  };
-
+const ShoeOverview = ({
+  onClose,
+  currentIndex,
+  onPrev,
+  onNext,
+  selectedSmallImageIndex,
+  handleSelectShoe,
+}) => {
   return (
     <div className={styles.shoeOverviewOverlay}>
       <div className={styles.shoeOverviewContainer}>
-        <button className={styles.btnClose}>
+        <button className={styles.btnClose} onClick={onClose}>
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
             <path
               d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
@@ -29,16 +24,13 @@ const ShoeOverview = () => {
         <div className={styles.shoeOverviewBigShoesContainer}>
           <div className={styles.shoeOverViewBigShoes}>
             <img
-              src={imgBig}
-              alt={name}
+              src={data[currentIndex].imgBig}
+              alt={data[currentIndex].name}
               className={styles.shoeOverViewBigShoesImg}
             />
           </div>
           <div className={styles.shoeOverviewBtnContainer}>
-            <button
-              onClick={handlePrevShoe}
-              className={styles.shoeOverviewBtnPrev}
-            >
+            <button onClick={onPrev} className={styles.shoeOverviewBtnPrev}>
               <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M11 1 3 9l8 8"
@@ -49,10 +41,7 @@ const ShoeOverview = () => {
                 />
               </svg>
             </button>
-            <button
-              onClick={handleNextShoe}
-              className={styles.shoeOverviewBtnNext}
-            >
+            <button onClick={onNext} className={styles.shoeOverviewBtnNext}>
               <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="m2 1 8 8-8 8"
@@ -66,10 +55,15 @@ const ShoeOverview = () => {
           </div>
         </div>
         <div className={styles.shoeOverviewSmallShoesContainer}>
-          {data.map((shoe) => {
+          {data.map((shoe, shoeIndex) => {
             const { id, imgSmall, name } = shoe;
+            const isSelected = shoeIndex === selectedSmallImageIndex;
             return (
-              <div className={styles.shoeOverViewSmallShoes} key={id}>
+              <div
+                className={`${isSelected ? styles.selectedSmallImage : ''}`}
+                key={id}
+                onClick={() => handleSelectShoe(shoeIndex)}
+              >
                 <img
                   src={imgSmall}
                   alt={name}

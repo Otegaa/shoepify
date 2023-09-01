@@ -6,12 +6,18 @@ import styles from './CSS/All.module.css';
 
 function App() {
   const [totalInCart, setTotalInCart] = useState(0);
+  const [isCartClicked, setIsCartClicked] = useState(false);
 
   return (
     <>
-      <Nav totalInCart={totalInCart} setTotalInCart={setTotalInCart} />
+      <Nav
+        totalInCart={totalInCart}
+        setTotalInCart={setTotalInCart}
+        isCartClicked={isCartClicked}
+        setIsCartClicked={setIsCartClicked}
+      />
       <div className={styles.sliderContainer}>
-        <Hero />
+        <Hero setIsCartClicked={setIsCartClicked} />
         <HeroDetails setTotalInCart={setTotalInCart} />
       </div>
     </>

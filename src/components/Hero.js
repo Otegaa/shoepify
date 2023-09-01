@@ -3,7 +3,7 @@ import styles from '../CSS/All.module.css';
 import ShoeOverview from './ShoeOverview';
 import { data } from '../data';
 
-const Hero = () => {
+const Hero = ({ setIsCartClicked }) => {
   const [index, setIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState('in');
   const [selectedShoe, setSelectedShoe] = useState(null);
@@ -41,6 +41,7 @@ const Hero = () => {
     setCurrentIndex(shoeIndex);
     setSelectedShoe(data[shoeIndex]);
     setSelectedSmallImageIndex(shoeIndex);
+    setIsCartClicked(false);
   };
 
   useEffect(() => {

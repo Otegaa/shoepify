@@ -3,9 +3,13 @@ import avatar from '../assets/images/image-avatar.png';
 import styles from '../CSS/All.module.css';
 import CartInfo from './CartInfo';
 
-const Nav = ({ totalInCart, setTotalInCart }) => {
+const Nav = ({
+  totalInCart,
+  setTotalInCart,
+  isCartClicked,
+  setIsCartClicked,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isCartClicked, setIsCartClicked] = useState(false);
 
   const handleOpenHamburger = () => {
     setIsOpen(true);

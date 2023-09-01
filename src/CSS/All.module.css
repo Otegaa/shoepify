@@ -166,6 +166,11 @@
   left: 20px;
 }
 
+.btnNext:hover path,
+.btnPrev:hover path {
+  stroke: #ff7d1a;
+}
+
 .heroDetails {
   padding: 2rem 1.5rem;
   display: flex;
@@ -550,7 +555,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(1px);
     z-index: 5;
     overflow-y: auto;
@@ -562,14 +567,20 @@
     position: relative;
   }
 
-  .btnClose {
+  .btnCloseContainer {
     position: absolute;
-    top: 0;
-    left: 64vw;
-    z-index: 10;
+    top: -4rem;
+    right: 0;
+  }
+
+  .btnClose {
     border: none;
     background: transparent;
     cursor: pointer;
+  }
+
+  .btnClose:hover path {
+    fill: #ff7d1a;
   }
 
   .shoeOverviewBigShoesContainer {
@@ -602,6 +613,12 @@
     border-radius: 50%;
     cursor: pointer;
     margin: 0 18rem;
+    transition: all 0.2s;
+  }
+
+  .shoeOverviewBtnNext:hover path,
+  .shoeOverviewBtnPrev:hover path {
+    stroke: #ff7d1a;
   }
 
   .shoeOverviewSmallShoesContainer {
@@ -648,7 +665,6 @@
 
   .selectedSmallImage img {
     border: 2px solid #ff7d1a;
-    z-index: 2;
   }
 }
 

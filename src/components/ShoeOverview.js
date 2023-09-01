@@ -60,7 +60,9 @@ const ShoeOverview = ({
             const isSelected = shoeIndex === selectedSmallImageIndex;
             return (
               <div
-                className={`${isSelected ? styles.selectedSmallImage : ''}`}
+                className={`${styles.shoeOverViewSmallShoes} ${
+                  isSelected ? styles.selectedSmallImage : ''
+                }`}
                 key={id}
                 onClick={() => handleSelectShoe(shoeIndex)}
               >

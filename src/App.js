@@ -3,9 +3,10 @@ import Nav from './components/Nav';
 import Hero from './components/Hero';
 import HeroDetails from './components/HeroDetails';
 import styles from './CSS/All.module.css';
+import { useLocalStorageState } from './components/useLocalStorageState';
 
 function App() {
-  const [totalInCart, setTotalInCart] = useState(0);
+  const [totalInCart, setTotalInCart] = useLocalStorageState(0, 'shoe');
   const [isCartClicked, setIsCartClicked] = useState(false);
 
   return (

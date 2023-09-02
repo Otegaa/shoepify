@@ -13,6 +13,7 @@ const Nav = ({
 
   const handleOpenHamburger = () => {
     setIsOpen(true);
+    setIsCartClicked(false);
   };
 
   const handleCloseHamburger = () => {
@@ -129,7 +130,11 @@ const Nav = ({
         </div>
       </div>
       {isCartClicked && (
-        <CartInfo totalInCart={totalInCart} setTotalInCart={setTotalInCart} />
+        <CartInfo
+          totalInCart={totalInCart}
+          setTotalInCart={setTotalInCart}
+          setIsCartClicked={setIsCartClicked}
+        />
       )}
     </>
   );

@@ -13,6 +13,7 @@ const Nav = ({
 
   const handleOpenHamburger = () => {
     setIsOpen(true);
+    setIsCartClicked(false);
   };
 
   const handleCloseHamburger = () => {

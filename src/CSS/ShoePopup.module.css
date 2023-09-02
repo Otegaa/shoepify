@@ -1,9 +1,9 @@
-.shoeOverviewContainer {
+.shoePopupContainer {
   display: none;
 }
 
 @media (min-width: 1000px) {
-  .shoeOverviewOverlay {
+  .shoePopupOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
     overflow-y: auto;
   }
 
-  .shoeOverviewContainer {
+  .shoePopupContainer {
     margin: 10rem 5rem 0;
     display: block;
     position: relative;
@@ -37,7 +37,7 @@
     fill: #ff7d1a;
   }
 
-  .shoeOverviewBigShoesContainer {
+  .shoePopupBigShoesContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,21 +45,21 @@
     margin-bottom: 2rem;
   }
 
-  .shoeOverViewBigShoesImg {
+  .shoePopupBigShoesImg {
     width: 40rem;
     height: 40rem;
     border-radius: 10px;
     position: relative;
   }
 
-  .shoeOverviewBtnContainer {
+  .shoePopupBtnContainer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
   }
 
-  .shoeOverviewBtnPrev,
-  .shoeOverviewBtnNext {
+  .shoePopupBtnPrev,
+  .shoePopupBtnNext {
     background: transparent;
     border: none;
     background-color: #fff;
@@ -70,19 +70,19 @@
     transition: all 0.2s;
   }
 
-  .shoeOverviewBtnNext:hover path,
-  .shoeOverviewBtnPrev:hover path {
+  .shoePopupBtnNext:hover path,
+  .shoePopupBtnPrev:hover path {
     stroke: #ff7d1a;
   }
 
-  .shoeOverviewSmallShoesContainer {
+  .shoePopupSmallShoesContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
   }
 
-  .shoeOverViewSmallShoes {
+  .shoePopupSmallShoes {
     height: 7rem;
     width: 7rem;
     border-radius: 10px;
@@ -90,7 +90,7 @@
     position: relative;
   }
 
-  .shoeOverViewSmallShoes::after {
+  .shoePopupSmallShoes::after {
     content: '';
     position: absolute;
     top: 0;
@@ -104,13 +104,13 @@
     border: 1px solid transparent;
   }
 
-  .shoeOverViewSmallShoes:hover::after {
+  .shoePopupSmallShoes:hover::after {
     background-color: rgba(255, 255, 255, 0.7);
     opacity: 1;
     border: 1px solid #ff7d1a;
   }
 
-  .shoeOverViewSmallShoesImg {
+  .shoePopupSmallShoesImg {
     width: 100%;
     height: auto;
     border-radius: 10px;

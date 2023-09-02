@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from '../CSS/Hero.module.css';
 import sharedStyles from '../CSS/Shared.module.css';
-import ShoeOverview from './ShoeOverview';
+import ShoePopup from './ShoePopup';
 import { data } from '../data';
 
 const Hero = ({ setIsCartClicked }) => {
@@ -118,7 +118,7 @@ const Hero = ({ setIsCartClicked }) => {
         </div>
       </div>
       {selectedShoe && (
-        <ShoeOverview
+        <ShoePopup
           shoe={selectedShoe}
           onClose={() => setSelectedShoe(null)}
           currentIndex={currentIndex}

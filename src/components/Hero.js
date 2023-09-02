@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import styles from '../CSS/All.module.css';
+import styles from '../CSS/Hero.module.css';
+import sharedStyles from '../CSS/Shared.module.css';
 import ShoeOverview from './ShoeOverview';
 import { data } from '../data';
 
@@ -76,7 +77,7 @@ const Hero = ({ setIsCartClicked }) => {
               return (
                 <div
                   className={`${styles.smallShoeImg} ${
-                    isSelected ? styles.selectedSmallImage : ''
+                    isSelected ? sharedStyles.selectedSmallImage : ''
                   }`}
                   key={id}
                   onClick={() => handleSelectShoe(shoeIndex)}

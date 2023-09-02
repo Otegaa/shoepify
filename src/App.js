@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import HeroDetails from './components/HeroDetails';
-import styles from './CSS/All.module.css';
+import sharedStyles from './CSS/Shared.module.css';
 import { useLocalStorageState } from './components/useLocalStorageState';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         isCartClicked={isCartClicked}
         setIsCartClicked={setIsCartClicked}
       />
-      <div className={styles.sliderContainer}>
+      <div className={sharedStyles.sliderContainer}>
         <Hero setIsCartClicked={setIsCartClicked} />
         <HeroDetails setTotalInCart={setTotalInCart} />
       </div>

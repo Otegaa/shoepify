@@ -1,4 +1,5 @@
-import styles from '../CSS/All.module.css';
+import styles from '../CSS/ShoeOverview.module.css';
+import sharedStyles from '../CSS/Shared.module.css';
 import { data } from '../data';
 
 const ShoeOverview = ({
@@ -63,7 +64,7 @@ const ShoeOverview = ({
             return (
               <div
                 className={`${styles.shoeOverViewSmallShoes} ${
-                  isSelected ? styles.selectedSmallImage : ''
+                  isSelected ? sharedStyles.selectedSmallImage : ''
                 }`}
                 key={id}
                 onClick={() => handleSelectShoe(shoeIndex)}

@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import styles from '../CSS/All.module.css';
+import styles from '../CSS/CartInfo.module.css';
 import cartImg from '../assets/images/image-product-1-thumbnail.jpg';
 
 const CartInfo = ({ totalInCart, setTotalInCart }) => {

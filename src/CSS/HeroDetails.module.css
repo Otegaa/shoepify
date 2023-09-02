@@ -1,0 +1,142 @@
+.heroDetails {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.company {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #ff7d1a;
+}
+
+.shoeAd {
+  font-size: 3rem;
+  width: 30rem;
+}
+
+.heroDetails {
+  flex: 1;
+}
+
+.heroDetails p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #68707d;
+}
+
+.price {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.discountPrice {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: auto;
+}
+
+.discountPrice h3 {
+  font-size: 2.5rem;
+}
+
+.discountBtn {
+  border: none;
+  background: transparent;
+  background: #ffede0;
+  font-size: 1.5rem;
+  color: #ff7d1a;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #ffede0;
+  border-radius: 3px;
+}
+
+.actualPrice {
+  font-size: 1.5rem;
+  color: #68707d;
+  text-decoration: line-through;
+}
+
+.cartDetails {
+  margin-top: 1rem;
+}
+
+.detailsBg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f8fd;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.detailsBg button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.detailsBg p {
+  font-weight: 700;
+}
+
+.cartInbox {
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7d1a;
+  border-radius: 15px;
+  padding: 2rem 0;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  transition: all 0.3s;
+}
+
+.cartInbox:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.cartIcon {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.cartInbox p {
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (min-width: 1000px) {
+  .heroDetails {
+    align-self: center;
+  }
+
+  .price {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .actualPrice {
+    align-items: flex-start;
+  }
+
+  .cartDetails {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .detailsBg {
+    flex: 0 0 40%;
+  }
+
+  .cartInbox {
+    margin-top: 0;
+  }
+}

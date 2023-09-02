@@ -1,0 +1,24 @@
+.sliderContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1000px) {
+  .sliderContainer {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 5rem 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sliderContainer {
+    gap: 2rem;
+  }
+
+  .selectedSmallImage img {
+    border: 2px solid #ff7d1a;
+  }
+}

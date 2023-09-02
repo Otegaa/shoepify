@@ -1,15 +1,19 @@
-.sliderContainer {
-  margin-top: 2rem;
+.heroShoe {
+  flex: 0 0 30%;
+  position: relative;
 }
 
 .shoeContainer {
   width: 100%;
-  position: relative;
 }
 
 .shoeImg {
   width: 100%;
   object-fit: cover;
+}
+
+.smallShoesContainer {
+  display: none;
 }
 
 .slideIn {
@@ -31,7 +35,8 @@
   border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  top: 25rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .btnNext {
@@ -42,114 +47,86 @@
   left: 20px;
 }
 
-.heroDetails {
-  padding: 2rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+.btnNext:hover path,
+.btnPrev:hover path {
+  stroke: #ff7d1a;
 }
 
-.company {
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: #ff7d1a;
+@media (min-width: 1000px) {
+  .heroShoe {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .shoeImg {
+    border-radius: 10px;
+  }
+
+  .allShoeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .smallShoesContainer {
+    width: 40rem;
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .smallShoeImg {
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 10px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .smallShoeImg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    transition: all 0.2s;
+    opacity: 0;
+  }
+
+  .smallShoeImg:hover::after {
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+    border: 1px solid #ff7d1a;
+  }
+
+  .btnNext,
+  .btnPrev {
+    display: none;
+  }
+
+  .slideIn,
+  .slideOut {
+    transition: none;
+    transform: translateX(0);
+  }
 }
 
-.shoeAd {
-  font-size: 3rem;
-  width: 30rem;
-}
+@media (min-width: 1280px) {
+  .heroShoe {
+    width: 50rem;
+    height: 50rem;
+  }
 
-.heroDetails p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: #68707d;
-}
+  .smallShoesContainer {
+    width: 50rem;
+  }
 
-.price {
-  display: flex;
-  align-items: center;
-  margin-top: 1.5rem;
-}
-
-.discountPrice {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-right: auto;
-}
-
-.discountPrice h3 {
-  font-size: 2.5rem;
-}
-
-.discountBtn {
-  border: none;
-  background: transparent;
-  background: #ffede0;
-  font-size: 1.5rem;
-  color: #ff7d1a;
-  font-weight: 700;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid #ffede0;
-  border-radius: 3px;
-}
-
-.actualPrice {
-  font-size: 1.5rem;
-  color: #68707d;
-  text-decoration: line-through;
-}
-
-.cartDetails {
-  margin-top: 1rem;
-}
-
-.detailsBg {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #f7f8fd;
-  padding: 1rem 2rem;
-  border-radius: 3px;
-}
-
-.detailsBg button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.detailsBg p {
-  font-weight: 700;
-}
-
-.cartInbox {
-  border: none;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ff7d1a;
-  border-radius: 15px;
-  padding: 2rem 0;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  transition: all 0.3s;
-}
-
-.cartInbox:hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-}
-
-.cartIcon {
-  font-size: 2rem;
-  color: #fff;
-}
-
-.cartInbox p {
-  color: #fff;
-  font-weight: 700;
+  .smallShoeImg {
+    width: 11rem;
+    height: 11rem;
+  }
 }

@@ -50,7 +50,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://metrics-website.netlify.app)
+[Live Demo](https://shoepify.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

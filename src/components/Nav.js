@@ -130,7 +130,11 @@ const Nav = ({
         </div>
       </div>
       {isCartClicked && (
-        <CartInfo totalInCart={totalInCart} setTotalInCart={setTotalInCart} />
+        <CartInfo
+          totalInCart={totalInCart}
+          setTotalInCart={setTotalInCart}
+          setIsCartClicked={setIsCartClicked}
+        />
       )}
     </>
   );

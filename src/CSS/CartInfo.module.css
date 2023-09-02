@@ -13,10 +13,23 @@
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 
-.cartTitle {
-  font-size: 1.5rem;
+.cartHeadingBox {
+  display: flex;
+  align-items: center;
   padding: 2rem 1.5rem 3.5rem;
   border-bottom: 1px solid #b6bcc8;
+}
+
+.closeCartBtn {
+  border: none;
+  background-color: transparent;
+  order: 1;
+  cursor: pointer;
+}
+
+.cartTitle {
+  font-size: 1.5rem;
+  margin-right: auto;
 }
 
 .cartInfo {
@@ -96,5 +109,13 @@
 
   .cartBox {
     margin-top: -4rem;
+  }
+
+  .closeCartBtn {
+    transition: all 0.2s;
+  }
+
+  .closeCartBtn:hover path {
+    fill: #ff7d1a;
   }
 }

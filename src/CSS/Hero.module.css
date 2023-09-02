@@ -1,0 +1,132 @@
+.heroShoe {
+  flex: 0 0 30%;
+  position: relative;
+}
+
+.shoeContainer {
+  width: 100%;
+}
+
+.shoeImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.smallShoesContainer {
+  display: none;
+}
+
+.slideIn {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideOut {
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.btnNext,
+.btnPrev {
+  background: transparent;
+  border: none;
+  background-color: #fff;
+  padding: 1.1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btnNext {
+  right: 20px;
+}
+
+.btnPrev {
+  left: 20px;
+}
+
+.btnNext:hover path,
+.btnPrev:hover path {
+  stroke: #ff7d1a;
+}
+
+@media (min-width: 1000px) {
+  .heroShoe {
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .shoeImg {
+    border-radius: 10px;
+  }
+
+  .allShoeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .smallShoesContainer {
+    width: 40rem;
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .smallShoeImg {
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 10px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .smallShoeImg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    transition: all 0.2s;
+    opacity: 0;
+  }
+
+  .smallShoeImg:hover::after {
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+    border: 1px solid #ff7d1a;
+  }
+
+  .btnNext,
+  .btnPrev {
+    display: none;
+  }
+
+  .slideIn,
+  .slideOut {
+    transition: none;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 1280px) {
+  .heroShoe {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  .smallShoesContainer {
+    width: 50rem;
+  }
+
+  .smallShoeImg {
+    width: 11rem;
+    height: 11rem;
+  }
+}

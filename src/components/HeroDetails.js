@@ -4,7 +4,7 @@ import {
   decreaseItem,
   setAmountToZero,
 } from '../Redux/cart/cartSlice';
-import styles from '../CSS/All.module.css';
+import styles from '../CSS/HeroDetails.module.css';
 import { PiShoppingCart } from 'react-icons/pi';
 
 const HeroDetails = ({ setTotalInCart }) => {
